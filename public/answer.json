@@ -1,13 +1,29 @@
 [
     {
         "action": "talk",
-        "text": "<speak>Please hold to listen to some music<break time='1s' /></speak>",
-        "voiceName": "Russell"
+        "text": "Welcome to a Voice API I V R.",
+        "voiceName": "Chipmunk",
+        "bargeIn": false
+    },
+    {
+        "action": "talk",
+        "text": "Press 1, for maybe, and 2, for not sure, followed by the hash key.",
+        "voiceName": "Chipmunk",
+        "bargeIn": true
+    },
+    {
+        "action": "input",
+        "maxDigits": 1,
+        "timeOut": 20,
+        "submitOnHash": true,
+        "eventUrl": ["https://5822b039.ngrok.io/webhooks/play"]
     },
     {
         "action": "stream",
         "streamUrl": [
-            "http://demo.ngrok.io/audio/silence.mp3"
-        ]
+            "https://5822b039.ngrok.io/audio/music.mp3"
+        ],
+        "bargeIn": true
     }
+    
 ]
